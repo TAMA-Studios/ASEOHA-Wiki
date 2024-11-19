@@ -1,0 +1,19 @@
+.btn {
+    color: blue;
+    padding-left: 50%;
+}
+.centered {
+    text-align: center;
+}
+body {
+    background-color: #003b6f;
+    background-image: url("wallpaper.png");
+    background-position: bottom;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+#outline-text {
+    color: white;
+    background-color: #003b6f;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
