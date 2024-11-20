@@ -1,87 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- TODO: Make this NOT download a .php file -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Search</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
-        }
-        .search-container {
-            max-width: 600px;
-            margin: 100px auto;
-            padding: 20px;
-            text-align: center;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .search-container h1 {
-            font-size: 2rem;
-            color: #4285f4;
-        }
-        .search-box {
-            display: flex;
-            margin-top: 20px;
-        }
-        .search-box input {
-            flex: 1;
-            padding: 10px;
-            font-size: 1rem;
-            border: 1px solid #ddd;
-            border-radius: 5px 0 0 5px;
-            outline: none;
-        }
-        .search-box button {
-            padding: 10px 20px;
-            font-size: 1rem;
-            border: none;
-            background: #4285f4;
-            color: white;
-            cursor: pointer;
-            border-radius: 0 5px 5px 0;
-        }
-        .search-box button:hover {
-            background: #3367d6;
-        }
-        .results {
-            margin-top: 20px;
-            text-align: left;
-        }
-        .result {
-            padding: 10px;
-            border-bottom: 1px solid #ddd;
-        }
-        .result a {
-            color: #4285f4;
-            font-size: 1.1rem;
-            text-decoration: none;
-        }
-        .result a:hover {
-            text-decoration: underline;
-        }
-        .result p {
-            margin: 5px 0 0;
-            font-size: 0.9rem;
-            color: #555;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <div class="search-container">
-        <h1>Search</h1>
-        <form class="search-box" action="search.php" method="get">
-            <input type="text" name="q" placeholder="Type your query...">
-            <button type="submit">Search</button>
-        </form>
-        <div class="results">
-            <!-- Results will be displayed here -->
-        </div>
+<div class="search-container">
+    <h1>Search</h1>
+    <form class="search-box" action="search.php" method="get">
+        <input type="text" name="q" placeholder="Type your query...">
+        <button type="submit">Search</button>
+    </form>
+    <div class="results">
+        <!-- Results will be displayed here -->
     </div>
+</div>
 </body>
 </html>

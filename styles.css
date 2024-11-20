@@ -1,19 +1,165 @@
-.btn {
-    color: blue;
-    padding-left: 50%;
+::-webkit-scrollbar {
+    width: 10px; /* width of the entire scrollbar */
 }
+
+::-webkit-scrollbar-track {
+    background: #003b6f; /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+    border: 2px solid #00FFFF;
+    border-radius:100px;
+    background: #bebebe; /* color of the scroll thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #888888; /* color of the scroll thumb on hover */
+}
+
+html {
+    scroll-behavior: smooth;
+}
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.btn {
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    background-color: #bebebe;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 1vw;
+    border: 2px solid black;
+    border-radius:3px;
+    font-size: 1.5vw;
+}
+
+@keyframes button {
+  from { background-color: #bebebe; border-radius:4px; }
+  to { background-color: #888888; border-radius:1px; }
+}
+
+.btn:hover {
+    animation-name: button;
+    animation-duration: 1s;
+    background-color: #888888;
+    border-radius: 1px;
+}
+
 .centered {
     text-align: center;
 }
+
 body {
+    font-family: Helvetica, serif;
     background-color: #003b6f;
-    background-image: url("wallpaper.png");
-    background-position: bottom;
-    background-position: right;
-    background-repeat: no-repeat;
 }
-#outline-text {
+
+.outline-text {
     color: white;
-    background-color: #003b6f;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#header-text {
+    position: fixed;
+    left: 50%;
+    top: 5%;
+    transform: translate(-50%, -50%);
+    font-size: 70%;
+    width: 100%;
+    height: 5%;
+}
+
+#header-image {
+    left: 50%;
+    top: 3.5vh;
+    transform: translate(-50%, -50%);
+    height: 7vh;
+    max-width: 100vw;
+    z-index: 0;
+    position: absolute;
+}
+
+@keyframes tardis {
+    from { opacity: 1.0; }
+    to { opacity: 0.2; }
+}
+
+#bg-image {
+    position: fixed;
+    left: 100%;
+    top: 100%;
+    transform: translate(-100%, -100%);
+    width: 25%;
+    animation-name: tardis;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    z-index:0;
+}
+
+#main-page-div {
+    background-color: #e3e3e3;
+    padding: 0.7vw;
+    border: 2px solid black;
+    border-radius: 8px;
+    position: absolute;
+    left: 9vw;
+    top: 55%;
+    transform: translate(0%, -50%);
+    width: 80vw;
+    font-size: 100%;
+    z-index: 1;
+}
+
+#feature-main-page-div {
+    background-color: #e3e3e3;
+    padding: 1vw;
+    border: 2px solid black;
+    border-radius: 8px;
+    position: absolute;
+    left: 9vw;
+    top: 12vh;
+    width: 80vw;
+    font-size: 80%;
+    z-index: 1;
+}
+
+#feature-div {
+    margin: 10px;
+    padding: 10px, 10px, 10px, 10px;
+}
+
+.feature-li {
+    margin: 15px;
+    padding: 15px, 15px, 15px, 15px;
+}
+
+#mouse {
+    position: absolute;
+    width:20px;
+    height:20px;
+    z-index: 5;
+}
+
+.feature-wrapper {
+    background-color: #ececec;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding:5vw, 5vh, 5vw, 5vh;
+    margin:10px;
+}
+
+.feature-header {
+    margin: 15px;
+    padding:5vw, 5vh, 5vw, 5vh;
 }

@@ -1,12 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASEOHA Wiki</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-  </head>
-  <body>
-    <h1 class="centered"><span id="outline-text"> ASEOHA Wiki </span></h1>
-    <p class="centered"><span id="outline-text"> Hello there! Welcome to the official ASEOHA wiki. Here you can find the guide to everything related to ASEOHA.</span></p>
-  </body>
+    <link rel="icon" type="images/x-icon" href="favicon.ico" />
+</head>
+<body>
+<img src="wallpaper.png" id="bg-image" alt="">
+<div id="header-text">
+    <img src="title.png" class="centered outline-text" id="header-image" alt="The Official ASEOHA Wiki">
+</div>
+<!--<img src="title.png" id="mouse" alt="^">-->
+<div id="main-page-div" style="height: 80%;">
+    <p>The latest ASEOHA version at the time of writing this is 6.2</p>
+    <canvas id="canvas"
+            style="position: absolute; left: 0.0vw; width: 81.4vw; height: 2px; background-color: #000000;"></canvas>
+    <div style="position: absolute; top: 10vh;">
+        <a href="features.html" class="btn">Features [1.16.5]</a>
+        <a href="features20.html" class="btn">Features [1.20.1]</a>
+        <a href="features20.html" class="btn">Recipes [1.16.5]</a>
+    </div>
+</div>
+</body>
+<script>
+    var MainDiv = document.getElementById("main-page-div");
+    var MouseEl = document.getElementById("mouse");
+
+<!--    document.addEventListener('mousemove', function(event) {-->
+<!--    let x = event.clientX; // Horizontal coordinate-->
+<!--    let y = event.clientY; // Vertical coordinate-->
+<!--    MouseEl.style.left = (x - 5) + "px";-->
+<!--    MouseEl.style.top = (y - 5) + "px";-->
+<!--});-->
+
+<!--    const canvas = document.getElementById('canvas');-->
+<!--    if (canvas.getContext) {-->
+<!--        const ctx = canvas.getContext('2d');-->
+<!--        ctx.beginPath();-->
+<!--        ctx.moveTo(50, 50); // Starting point (x, y)-->
+<!--        ctx.lineTo(500, 50); // Ending point (x, y)-->
+<!--        ctx.strokeStyle = 'blue'; // Line color-->
+<!--        ctx.lineWidth = 10; // Line width-->
+<!--        ctx.lineHeight = 10;-->
+<!--        ctx.stroke(); // Draw the line-->
+<!--    }-->
+</script>
 </html>
