@@ -5,46 +5,49 @@
     <link rel="icon" href="/favicon.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASEOHA!</title>
-    <meta content="The ASEOHA Wiki" property="og:title"/>
-    <meta content="The official ASEOHA Home page!" property="og:description"/>
-    <meta content="https://www.aseoha.com" property="og:url"/>
+    <meta content="404 - Page Not Found" property="og:title"/>
+    <meta content="This page was not found" property="og:description"/>
+    <meta content="https://www.aseoha.com/404" property="og:url"/>
     <meta content="title.png" property="og:image"/>
     <meta content="#003b6f" data-react-helmet="true" name="theme-color"/>
     <link rel="icon" type="images/x-icon" href="/favicon.ico"/>
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script src="/send_email.js"></script>
-    <script src="/sidebar.js"></script>
-    <script src="/darkmode.js"></script>
-
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" type="text/css" href="sidebar.css">
     <link rel="stylesheet" type="text/css" href="darkStyles.css">
+
+    <script src="/sidebar.js"></script>
+    <script src="/darkmode.js"></script>
 </head>
 <body>
 <img src="wallpaper.png" id="bg-image" alt="">
 
 <div id="main-page-div" style="height: 80%;">
 
-    <p>Welcome to the ASEOHA Website!</p>
+    <h1>Error 404: Page not found</h1>
+
     <canvas id="canvas"
             style="position: absolute; left: 0.0vw; width: 81.4vw; height: 2px; background-color: #000000;"></canvas>
     <div style="position: absolute; top: 10vh;">
-        <p>ASEOHA Is an addon mod for the New TARDIS Mod (Commonly known as NTM)<br/>
-            To navigate to other sections of this page, use the hamburger button at the top left of the screen, where
-            you will also find a dark mode slider.<br/></p>
-        HAVE FUN!
+
+        <p>The page you're looking for doesn't exist or has been invaded by the cybermen.</p>
+        <div class="navigation">
+            <a href="https://aseoha.com/" class="btn">Return Home</a>
+            <a href="https://aseoha.com/wiki" class="btn">Go to Wiki</a>
+            <a href="https://aseoha.com/updates" class="btn">Updates</a>
+        </div>
     </div>
-
-
-    <!-- Email -->
-    <div id="main-page-div-bottom"><h2>Send an Email</h2> <label for="message"></label><textarea id="message" rows="5"
-                                                                                                 cols="40"
-                                                                                                 placeholder="Enter your message here..."></textarea><br>
-        <button onclick="sendEmail()">Send Email</button>
+    <div id="debug-info">
+        <h3>Debug Info</h3>
+        <ul>
+            <li>Referring URL: <!--#echo var="HTTP_REFERER" --></li>
+            <li>Visitor's IP Address: <!--#echo var="REMOTE_ADDR" --></li>
+            <li>Requested URL: <!--#echo var="REQUEST_URI" --></li>
+            <li>Server Name: <!--#echo var="HTTP_HOST" --></li>
+            <li>Visitor's Browser: <!--#echo var="HTTP_USER_AGENT" --></li>
+            <li>Redirect Status Code: <!--#echo var="REDIRECT_STATUS" --></li>
+        </ul>
     </div>
-
-
 </div>
 
 
@@ -66,6 +69,5 @@
                     class="slider"></span> </label></div>
     </div>
 </div>
-
 </body>
 </html>

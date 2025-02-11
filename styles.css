@@ -16,9 +16,15 @@
 background: #888888; /* color of the scroll thumb on hover */
 }
 
+.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
 html {
     scroll-behavior: smooth;
 }
+
 a:link {
     text-decoration: none;
     color: black;
@@ -68,8 +74,17 @@ a:link {
 }
 
 body {
+    padding: 20px;
     font-family: Helvetica, serif;
     background-color: #003b6f;
+    color: #121212;
+}
+
+
+body.dark-mode {
+    font-family: Helvetica, serif;
+    background-color: #00294d;
+    color: #ffffff;
 }
 
 .outline-text {
@@ -116,6 +131,8 @@ body {
 }
 
 #main-page-div {
+    height: 50vh;
+    display:inline-block;
     background-color: #e3e3e3;
     padding: 0.7vw;
     border: 2px solid black;
@@ -134,6 +151,7 @@ body {
 }
 
 #main-page-div-bottom {
+    position: fixed;
     background-color: #e3e3e3;
     padding: 0.7vw;
     border: 2px solid black;
@@ -143,6 +161,13 @@ body {
     transform: translate(0%, -50%);
     font-size: 100%;
     z-index: 1;
+}
+
+#debug-info {
+    position: absolute;
+    padding: 5px;
+    margin: auto;
+    bottom: 0px;
 }
 
 #feature-main-page-div {
@@ -187,3 +212,7 @@ body {
     margin: 15px;
     padding:5vw, 5vh, 5vw, 5vh;
 }
+
+
+
+

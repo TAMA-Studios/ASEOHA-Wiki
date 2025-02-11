@@ -1,0 +1,185 @@
+.btn.dark-mode {
+    color: white;
+    -webkit-text-stroke: 1.5px black;
+    background-color: #bebebe;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 1vw;
+    border: 2px solid black;
+    border-radius:3px;
+    font-size: 2vw;
+    color: purple; /* Default color for visited links */
+    text-decoration: underline; /* Default text decoration */
+}
+
+@keyframes button-dark {
+  from { background-color: #bebebe; border-radius:4px; }
+  to { background-color: #888888; border-radius:1px; }
+}
+
+.btn.dark-mode:hover {
+    animation-name: button-dark;
+    animation-duration: 1s;
+    background-color: #888888;
+    border-radius: 1px;
+}
+
+
+
+#main-page-div-bottom.dark-mode {
+    position: fixed;
+    background-color: #292929;
+    padding: 0.7vw;
+    border: 2px solid black;
+    border-radius: 8px;
+    position: absolute;
+    top: 85%;
+    transform: translate(0%, -50%);
+    font-size: 100%;
+    z-index: 1;
+}
+
+#main-page-div.dark-mode {
+    height: 50%;
+    display:inline-block;
+    background-color: #121212;
+    padding: 0.7vw;
+    border: 2px solid black;
+    border-radius: 8px;
+    position: absolute;
+    left: 9vw;
+    top: 55%;
+    transform: translate(0%, -50%);
+    width: 80vw;
+    font-size: 100%;
+    z-index: 1;
+}
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+    .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: #2196F3;
+}
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+#darkModeSlider {
+    position: fixed;
+    bottom: -45%;
+    left: 0;
+}
+
+
+
+
+
+
+
+
+
+       .sidebar.dark-mode {
+            z-index: 2;
+            width: 250px;
+            height: 100vh;
+            background: #333;
+            color: white;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            transition: width 0.3s;
+            overflow: hidden;
+        }
+        .sidebar.collapsed.dark-mode {
+            width: 15px;
+        }
+        .sidebar.dark-mode h2, .sidebar.dark-mode a {
+            transition: opacity 0.3s;
+        }
+        .sidebar.collapsed.dark-mode h2, .sidebar.collapsed.dark-mode a, .sidebar.collapsed.dark-mode div {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .sidebar.dark-mode a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px 0;
+            white-space: nowrap;
+        }
+        .sidebar.dark-mode div {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            white-space: nowrap;
+        }
+        .sidebar.dark-mode a:hover {
+            background: #575757;
+        }
+        .toggle-btn.dark-mode {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            z-index: 1000;
+            transition: left 0.3s;
+        }
+        .sidebar.collapsed.dark-mode .toggle-btn {
+            left: 10px;
+        }
+        .content.dark-mode {
+            margin-left: 270px;
+            padding: 20px;
+            transition: margin-left 0.3s;
+        }
+        .collapsed.dark-mode + .content {
+            margin-left: 70px;
+        }
+
+       sidebar.dark-mode button {
+            color: #ffffff;
+            background: #121212;
+       }

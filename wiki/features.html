@@ -2,14 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASEOHA Features</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta content="ASEOHA [1.16.5] Features" property="og:title"/>
+    <meta content="This article lays out every feature added by ASEOHA in the 1.16.5 version."
+          property="og:description"/>
+    <meta content="https://www.aseoha.com/wiki/features" property="og:url"/>
+    <meta content="/title.png" property="og:image"/>
+    <meta content="#003b6f" data-react-helmet="true" name="theme-color"/>
+    <link rel="icon" type="images/x-icon" href="/favicon.ico"/>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="/send_email.js"></script>
+    <script src="/darkmode.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <link rel="stylesheet" type="text/css" href="/darkStyles.css">
 </head>
 <body>
-<img src="wallpaper.png" id="bg-image" alt="">
+<img src="/wallpaper.png" id="bg-image" alt="">
 <div id="header-text">
-    <img src="title.png" class="centered outline-text" id="header-image" alt="The Official ASEOHA Wiki">
+    <img src="/title.png" class="centered outline-text" id="header-image" alt="The Official ASEOHA Wiki">
 </div>
 <div id="feature-main-page-div" style="color: black;">
     <div id="feature-div" style="color: black;">
@@ -143,6 +157,13 @@
                     <p>Artron Bank:<br/> The Artron bank is used as a method of converting Experience points (XP) to
                         Artron Units (AU)<br/>Right-clicking the Artron Bank will take away 1 XP level and convert it
                         into 8 AU Shift clicking the Artron Bank will take 10AU and convert it into 1 XP.
+                    </p>
+                </li>
+
+                <li class="feature-li" id="foodmachine">
+                    <p>Food Machine:<br/>The Food Machine takes artron and converts it to food, you can change what
+                        food comes out based on if you're holding shift, ctrl, alt, or nothing when you interact with
+                        the food machine
                     </p>
                 </li>
             </ul>
