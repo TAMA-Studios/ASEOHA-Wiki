@@ -167,7 +167,7 @@ body.dark-mode {
     position: absolute;
     padding: 5px;
     margin: auto;
-    bottom: 0px;
+    top: 70%;
 }
 
 #feature-main-page-div {

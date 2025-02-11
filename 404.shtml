@@ -37,7 +37,7 @@
             <a href="https://aseoha.com/updates" class="btn">Updates</a>
         </div>
     </div>
-    <div id="debug-info">
+    <div id="debug-info" style="position: absolute; top: 70%">
         <h3>Debug Info</h3>
         <ul>
             <li>Referring URL: <!--#echo var="HTTP_REFERER" --></li>
@@ -56,9 +56,9 @@
     <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
     <div id="sidebar-contents">
         <h2>Sidebar</h2>
-        <a href="/index.html">Home</a>
-        <a href="/wiki/index.html">Wiki</a>
-        <a href="/updates/index.html">Updates</a>
+        <a href="index.html">Home</a>
+        <a href="wiki/index.html">Wiki</a>
+        <a href="updates/index.html">Updates</a>
         <a href="#">Contact (UNFINISHED)</a>
 
         <!-- Dark Mode -->
