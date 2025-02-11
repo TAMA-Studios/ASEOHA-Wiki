@@ -29,9 +29,15 @@ a:visited {
     color: white;
 }
 
+
+a:link {
+    text-decoration: none;
+    color: white;
+}
+
 .btn {
     color: white;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    -webkit-text-stroke: 1.5px black;
     background-color: #bebebe;
     padding-left: 15px;
     padding-right: 15px;
@@ -40,7 +46,9 @@ a:visited {
     margin: 1vw;
     border: 2px solid black;
     border-radius:3px;
-    font-size: 1.5vw;
+    font-size: 2vw;
+    color: purple; /* Default color for visited links */
+    text-decoration: underline; /* Default text decoration */
 }
 
 @keyframes button {
@@ -66,7 +74,7 @@ body {
 
 .outline-text {
     color: white;
-    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    -webkit-text-stroke: 1.5px black;
 }
 
 #header-text {
@@ -117,6 +125,22 @@ body {
     top: 55%;
     transform: translate(0%, -50%);
     width: 80vw;
+    font-size: 100%;
+    z-index: 1;
+}
+
+.bottom-element {
+    margin-top: auto;
+}
+
+#main-page-div-bottom {
+    background-color: #e3e3e3;
+    padding: 0.7vw;
+    border: 2px solid black;
+    border-radius: 8px;
+    position: absolute;
+    top: 85%;
+    transform: translate(0%, -50%);
     font-size: 100%;
     z-index: 1;
 }

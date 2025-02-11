@@ -3,9 +3,43 @@
 <link rel="stylesheet" type="text/css" href="styles.css">
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="favicon.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASEOHA Wiki</title>
+    <meta content="The ASEOHA Wiki" property="og:title" />
+    <meta content="The official ASEOHA Wiki! Documents all features present in ASEOHA" property="og:description" />
+    <meta content="https://www.aseoha.com" property="og:url" />
+    <meta content="title.png" property="og:image" />
+    <meta content="#003b6f" data-react-helmet="true" name="theme-color" />
     <link rel="icon" type="images/x-icon" href="favicon.ico" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("jB_PCP6pfNV5foHau"); // Replace with your EmailJS User ID
+        })();
+
+        function sendEmail() {
+            let textContent = document.getElementById("message").value;
+
+            if (!textContent) {
+                alert("Please enter a message.");
+                return;
+            }
+
+            let templateParams = {
+                message: textContent,
+                to_email: "tomo42806@example.com", // Replace with your email
+            };
+
+            emailjs.send("service_a4bum8f", "template_2ukw4uo", templateParams)
+                .then(response => {
+                    alert("Email sent successfully!");
+                }, error => {
+                    alert("Failed to send email: " + JSON.stringify(error));
+                });
+        }
+    </script>
 </head>
 <body>
 <img src="wallpaper.png" id="bg-image" alt="">
@@ -14,15 +48,23 @@
 </div>
 <!--<img src="title.png" id="mouse" alt="^">-->
 <div id="main-page-div" style="height: 80%;">
-    <p>The latest ASEOHA version at the time of writing this is 6.2</p>
+    <p>The latest ASEOHA version at the time of writing this is 6.2 for 1.16.5, and 1.1 for 1.19.4</p>
     <canvas id="canvas"
             style="position: absolute; left: 0.0vw; width: 81.4vw; height: 2px; background-color: #000000;"></canvas>
     <div style="position: absolute; top: 10vh;">
-        <a href="features.html" class="btn">Features [1.16.5]</a>
-        <a href="features20.html" class="btn">Features [1.20.1]</a>
+        <a href="features.html" class="btn">Features [1.16.5] 6.2</a>
+        <a href="features20.html" class="btn">Features [1.19.4] 1.1</a>
         <a href="features20.html" class="btn">Recipes [1.16.5]</a>
     </div>
+
+
+    <div id="main-page-div-bottom" class="bottom-element">
+        <h2>Send an Email</h2>
+        <textarea id="message" rows="5" cols="40" placeholder="Enter your message here..."></textarea><br>
+        <button onclick="sendEmail()">Send Email</button>
+    </div>
 </div>
+
 </body>
 <script>
     var MainDiv = document.getElementById("main-page-div");
