@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASEOHA!</title>
     <meta content="The ASEOHA Wiki" property="og:title"/>
-    <meta content="The official ASEOHA Wiki! Documents all features present in ASEOHA. This is the new and improved wiki, that is replacing the fandom wiki" property="og:description"/>
+    <meta content="The official ASEOHA Wiki! Documents all features present in ASEOHA" property="og:description"/>
     <meta content="https://www.aseoha.com" property="og:url"/>
     <meta content="title.png" property="og:image"/>
     <meta content="#003b6f" data-react-helmet="true" name="theme-color"/>
@@ -35,6 +35,13 @@
         <a href="features20.html" class="btn">Features [1.19.4] 1.1</a>
         <a href="features20.html" class="btn">Recipes [1.16.5]</a>
     </div>
+
+    <!-- Email -->
+    <div id="main-page-div-bottom"><h2>Send an Email</h2> <label for="message"></label><textarea id="message" rows="5"
+                                                                                                 cols="40"
+                                                                                                 placeholder="Enter your message here..."></textarea><br>
+        <button onclick="sendEmail()">Send Email</button>
+    </div>
 </div>
 
 
@@ -51,10 +58,10 @@
         <!-- Dark Mode -->
         <div class="toggle-container" id="darkModeSlider"><p style="margin: auto; padding: 5px;">Dark Mode </p>
             <label
-                class="switch"> <input type="checkbox"
-                                          id="darkModeToggle">
+                    class="switch"> <input type="checkbox"
+                                           id="darkModeToggle">
                 <span
-                    class="slider"></span> </label></div>
+                        class="slider"></span> </label></div>
     </div>
 </div>
 </body>
