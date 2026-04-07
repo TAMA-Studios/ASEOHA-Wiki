@@ -8,14 +8,17 @@ draft: false
 
 ## Spectrometer Console Recipes
 
+
 | Console Unlock | Put This In The Spectrometer |
-| --- | --- |
+| --------------------- | ---------------------------- |
 | `Copper Console` | `Golden Potato` |
 | `Brackolin Console` | `Red Nether Bricks` |
 | `Custard Console` | `Cut Sandstone` |
 | `Blue Marble Console` | `Smooth Quartz` |
 
+
 ## Unfinished consoles:
 
 - Battle
 - Hartnell
+
