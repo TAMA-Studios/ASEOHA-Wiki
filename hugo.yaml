@@ -1,0 +1,25 @@
+title: My Wiki
+baseURL: https://YOUR-USERNAME.github.io/YOUR-REPO/
+enableRobotsTXT: true
+enableGitInfo: true
+defaultContentLanguage: en
+
+module:
+  imports:
+    - path: github.com/imfing/hextra
+  mounts:
+    - source: content
+      target: content
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+
+menu:
+  main:
+    - name: GitHub
+      url: "https://github.com/YOUR-USERNAME/YOUR-REPO"
+      weight: 1
