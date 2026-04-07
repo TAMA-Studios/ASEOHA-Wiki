@@ -6,13 +6,12 @@ content:
   - name: wiki
     label: Wiki Pages
     type: collection
-    path: content
-    filename: '{fields.title}.md'
+    path: content/docs
     view:
       fields: [title, date, draft]
-      sort: [title, date]
+      sort: [weight, title]
       default:
-        sort: title
+        sort: weight
         order: asc
     fields:
       - name: title
@@ -31,9 +30,9 @@ content:
         type: boolean
         default: false
       - name: weight
-        label: Sidebar Order (Weight)
+        label: Sidebar Order
         type: number
-        description: Lower numbers appear higher in the sidebar. Leave blank for automatic.
+        description: Lower = higher in sidebar. Leave blank for alphabetical.
       - name: body
         label: Body
         type: rich-text

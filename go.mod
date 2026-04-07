@@ -1,4 +1,4 @@
-module github.com/YOUR-USERNAME/YOUR-REPO
+module github.com/TAMA-Studios/ASEOHA-Wiki
 
 go 1.21
 
