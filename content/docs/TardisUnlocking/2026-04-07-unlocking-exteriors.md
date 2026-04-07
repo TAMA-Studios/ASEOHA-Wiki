@@ -10,8 +10,9 @@ The exteriors below are unlocked through the Spectrometer.
 
 ## Spectrometer Exterior Recipes
 
+
 | Exterior Unlock | Put This In The Spectrometer |
-| --- | --- |
+| ------------------ | ---------------------------- |
 | `Coral` | `Lapis Lazuli` |
 | `Brackolin` | `Nether Bricks` |
 | `Capaldi` | `Painting` |
@@ -22,13 +23,16 @@ The exteriors below are unlocked through the Spectrometer.
 | `Wardrobe` | `Oak Planks` |
 | `Bluedoctor` | `Lapis Block` |
 
+
 ## Support Recipe: Artron Bank
 
 You need this for the `Classic Hartnell` exterior unlock.
 
+
 | Output | Recipe |
-| --- | --- |
+| ------------- | --------------------------------------------- |
 | `Artron Bank` | `Xion Crystal x4`, `Gold Ingot x4`, `Diamond` |
+
 
 ## Registered Exteriors With No Recipe Found Here
 
