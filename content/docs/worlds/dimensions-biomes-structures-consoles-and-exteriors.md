@@ -1,109 +1,41 @@
 ---
 title: Dimensions, Biomes, Structures, Consoles, And Exteriors
 date: 2026-04-07
-description: Worldgen-backed destinations plus ASEOHA's TARDIS shell catalog
+description: How to unlock interiors, exteriors, and console themes, plus what the destination worlds are for
 draft: false
 weight: 1
 ---
 
-# Dimension Definitions
+# How To Unlock Exteriors
 
-ASEOHA ships eight dimension definition files:
+The exteriors below are unlocked through the Spectrometer.
 
-- Adipose Three
-- Gallifrey
-- Klom
-- Midnight
-- New Earth
-- Raxicoricofallapatorious
-- Skaro
-- Trenzalore
+## Spectrometer Exterior Recipes
 
-`AseohaDimensions` also defines registry keys for:
-
-- Klom
-- Gallifrey
-- Vortex
-
-The data pack side clearly goes beyond those two and supplies actual dimension JSONs for the wider planet set.
-
-## Manual-Documented Worlds
-
-The in-game manual explicitly documents these locations:
-
-| World | Manual description |
+| Exterior Unlock | Put This In The Spectrometer |
 | --- | --- |
-| New Earth | infinite city exploration with treasure-hunt style buildings |
-| Gallifrey | orange sky, red grass, villages, and a distinctive palette |
-| Skaro | heavy Dalek presence |
-| Trenzalore | snowy settlements |
-| Raxicoricofallapitorius | mostly dirt and water, low activity |
-| Klom | dark hostile moon |
-| Adipose breeding grounds | referenced in the manual, though the actual data uses `adipose_three` |
+| `Coral` | `Lapis Lazuli` |
+| `Brackolin` | `Nether Bricks` |
+| `Capaldi` | `Painting` |
+| `Classic Hartnell` | `Artron Bank` |
+| `McGann` | `Blue Dye` |
+| `Olwarrior` | `Warped Door` |
+| `Rani` | `Stone Bricks` |
+| `Wardrobe` | `Oak Planks` |
+| `Bluedoctor` | `Lapis Block` |
 
-Midnight and several redlands/death-zone biome files also exist in the data layer even though they are not all surfaced through the in-game manual.
+### Support Recipe: Artron Bank
 
-# Biome Layer
+You need this for the `Classic Hartnell` exterior unlock.
 
-The `data/aseoha/worldgen/biome` folder contains twenty biome definitions, including:
+| Output | Recipe |
+| --- | --- |
+| `Artron Bank` | `Xion Crystal x4`, `Gold Ingot x4`, `Diamond` |
 
-- the main destination biomes listed above
-- `midnight`
-- `death_zone`
-- a large `redlands` biome family with cliffs, rivers, mountains, taiga variants, and cold-ocean support
+## Registered Exteriors With No Recipe Found Here
 
-This indicates that ASEOHA's world layer is broader than the in-game manual alone suggests.
+These exteriors exist in ASEOHA, but no Spectrometer recipe file was found for them:
 
-## Notable Biome Traits
-
-Examples pulled directly from biome JSONs:
-
-- `newearth` is an ocean-category biome that explicitly starts the `aseoha:road` structure and spawns villagers in large groups
-- `gallifreybiome` uses a custom surface builder, supports villages and mansions, and references `aseoha:barn_one` and `aseoha:citadel`
-- `skarobiome` spawns Daleks aggressively and references base-TARDIS structures like `dalek_ship` and `crashed_structure`
-- `trenzalorebiome` includes village, mansion, outpost, and buried-treasure starts
-
-# Structures
-
-## Active Java Registrations
-
-`STStructures` actively registers:
-
-- `road`
-- `barn_one`
-- `cyber_conversion_ship`
-
-Configured-structure registration mirrors those same three.
-
-## Actual Placement Behavior
-
-The placement story is split between code and data:
-
-- `road` is used by the `newearth` biome and backed by a template pool with straight, alternate, curve, and intersection pieces
-- `barn_one` is referenced by the Gallifrey biome data
-- `cyber_conversion_ship` is injected by Java code only into the vanilla `mountains` biome and only in the overworld spacing pass
-
-So the Cyber Conversion Ship is a targeted overworld structure, not a general planet structure.
-
-## Dormant Structure Content
-
-The codebase also contains classes or data for:
-
-- Gridlock
-- Citadel
-
-But in this branch:
-
-- `gridlock` is not actively registered
-- `citadel` is referenced in biome JSON, but its Java registration is commented out
-
-That means Citadel is part of the content design, but not fully wired as a live structure here.
-
-# Exteriors
-
-`ExteriorsRegistry` actively registers these TARDIS exterior types:
-
-- Coral
 - Sutekh
 - Mk2 Capaldi
 - Mk2 Davidson
@@ -114,38 +46,137 @@ That means Citadel is part of the content design, but not fully wired as a live 
 - Mk2 Tennant
 - Mk2 Whittaker
 - Whittaker
-- Brackolin
-- Wardrobe
-- Rani
-- Olwarrior
-- Bluedoctor
-- Classic Hartnell
-- Capaldi
-- McGann
 - Colin Richmond
 
-## Exterior Variant Support
+Treat those as non-survival, admin, or unfinished unlocks unless your server or modpack adds another path.
 
-Several exteriors include texture-variant arrays rather than a single look.
+# How To Unlock Consoles
 
-Important examples:
+## Spectrometer Console Recipes
 
-- Coral has default and Bad Wolf variants
-- Capaldi has default, invisible, and tribute variants
-- Wardrobe has multiple wood and material finishes
-- Colin Richmond has the largest variant set, covering RTD, Moffat, war, and custom skins
+| Console Unlock | Put This In The Spectrometer |
+| --- | --- |
+| `Copper Console` | `Golden Potato` |
+| `Brackolin Console` | `Red Nether Bricks` |
+| `Custard Console` | `Cut Sandstone` |
+| `Blue Marble Console` | `Smooth Quartz` |
 
-This makes the exterior system one of ASEOHA's strongest customization layers.
+## Registered Consoles With No Recipe Found Here
 
-# Consoles Revisited From The World/Theme Side
-
-From a content perspective, the registered console lineup is:
-
-- Copper
-- Custard
 - Battle
-- Brackolin
-- Blue Marble
 - Hartnell
 
-ASEOHA also carries supporting theme assets for older or alternate consoles that are not all live-registered in this branch. That is why some block and texture content appears broader than the active console registry.
+# How To Unlock Interiors
+
+Interiors are also unlocked through the Spectrometer.
+
+## Spectrometer Interior Recipes Found
+
+| Interior Unlock | Put This In The Spectrometer |
+| --- | --- |
+| `13th Crystal Interior` | `Yellow Crystal` |
+| `4th Secondary Interior` | `Cookie` |
+| `8th Edwardian Interior` | `Alembic` |
+| `Astronomer` | `Cogwheel` |
+| `Basic Interior` | `Alabaster` |
+| `Blue Doctor Interior` | `Warped Planks` |
+| `C7007` | `Quartz` |
+| `Catherine Interior` | `Black Terracotta Roundel` |
+| `Cavern` | `Shroomlight` |
+| `Clockwork Interior` | `Tezarak Coin` |
+| `Cody` | `Nether Bricks Roundel` |
+| `Crystal Tungsten` | `Yellow Stained Glass` |
+| `Eight` | `End Stone Bricks` |
+| `Five` | `Dark Oak Slab` |
+| `Four` | `Bookshelf` |
+| `Hell Bent Interior` | `Clay` |
+| `Ironclad` | `Iron Block` |
+| `Jazz Age` | `Jukebox` |
+| `Jungle Interior` | `Jungle Sapling` |
+| `Kaley Interior` | `Gilded Blackstone` |
+| `Master TARDIS` | `Lava Bucket` |
+| `MD Copper` | `Smooth Red Sandstone` |
+| `Missy Interior` | `Magenta Stained Glass` |
+| `Moonlight Forest` | `Spruce Wood` |
+| `Nightskies Interior` | `Ebony Bookshelf` |
+| `Nine` | `Magma Block` |
+| `One` | `Eye Monitor` |
+| `Ruth Interior` | `Andesite Wall` |
+| `Secret Archive` | `Clay Ball` |
+| `Seven` | `Smooth Stone Slab` |
+| `Six` | `Water Bucket` |
+| `Tailgate` | `Grass` |
+| `Takomak` | `Jukebox` |
+| `Tanzanite` | `Purple Wool` |
+| `Ten` | `Compass` |
+| `Three` | `Cyan Terracotta` |
+| `Toyota Interior` | `Spinny Thing` |
+| `Two` | `White Wool` |
+| `Valeyard Interior` | `Spruce Planks` |
+| `Wizard Tower` | `Purple Carpet` |
+
+## Practical Unlock Advice
+
+If you are just trying to get started quickly:
+
+| Goal | Easy unlock to chase |
+| --- | --- |
+| first exterior | `Coral` from `Lapis Lazuli` |
+| first console | `Copper Console` from `Golden Potato` |
+| first interior | `Basic Interior` from `Alabaster` |
+
+# Destination Worlds
+
+These are the worlds the built-in manual clearly expects players to visit.
+
+| World | What to expect |
+| --- | --- |
+| `New Earth` | city exploration, roads, buildings, loot-hunting |
+| `Gallifrey` | villages and a strong custom color palette |
+| `Skaro` | dangerous Dalek-heavy world |
+| `Trenzalore` | snowy settlements |
+| `Raxicoricofallapitorius` | quieter world with lighter exploration value |
+| `Klom` | hostile moon-style destination |
+| `Adipose` | referenced destination with less complete gameplay support in this branch |
+
+# Worldgen Notes Players Actually Care About
+
+## New Earth
+
+The useful part:
+
+- New Earth is the place tied most directly to ASEOHA structure generation
+- the biome data explicitly includes ASEOHA road generation
+
+If you want to explore obvious ASEOHA world content, this is one of the best places to start.
+
+## Gallifrey
+
+The useful part:
+
+- Gallifrey biome data points at villages and extra ASEOHA structure hooks such as `barn_one`
+
+## Skaro
+
+The useful part:
+
+- Skaro is the dangerous combat/exploration destination
+- biome data heavily favors Dalek spawning
+
+# Structures
+
+The active branch wiring clearly points to these ASEOHA world structures:
+
+- `Road`
+- `Barn One`
+- `Cyber Conversion Ship`
+
+Practical reading of that:
+
+| Structure | Where it matters most |
+| --- | --- |
+| `Road` | New Earth exploration |
+| `Barn One` | Gallifrey-themed world content |
+| `Cyber Conversion Ship` | overworld mountains hook in this branch |
+
+Some other structure content exists in files or code, but if it is not fully wired here, it is not treated as normal survival guidance in this wiki.

@@ -8,4 +8,4 @@ weight: 4
 
 This section documents ASEOHA's world-content layer.
 
-- [Dimensions, Biomes, Structures, Consoles, And Exteriors](dimensions-biomes-structures-consoles-and-exteriors.md)
+- [Dimensions, Biomes, Structures, Consoles, And Exteriors](/docs/worlds/dimensions-biomes-structures-consoles-and-exteriors/)

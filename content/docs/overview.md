@@ -1,66 +1,63 @@
 ---
 title: Overview
 date: 2026-04-07
-description: High-level map of ASEOHA's implemented systems and content
+description: Start here for practical ASEOHA progression and feature use
 draft: false
 weight: 1
 ---
 
+# Start Here
 
-# The current documentation (for lack of a better option) has been made with ai. so it will have things that arent exactly needed right now. im sure codiak is conna have my ass for this but oh well. he can document this shit himself
+This wiki is focused on the useful part: how to get things, how to use them, and what they actually do in play.
 
+## Fast Progression Path
 
+1. Get the ASEOHA manual.
+2. Make the basic utility items and machines:
+   - `control_mold`
+   - `engine`
+   - `sonic_workbench`
+   - modular controls you want for your console room
+3. Use the Spectrometer to unlock:
+   - exteriors
+   - consoles
+   - interiors
+4. Use the Quantiscope to make:
+   - advanced modular controls
+   - Hammer Space Pouch
+   - Deadlocker
+   - upgrade parts
+   - Sonic Laser
+5. Build into late-game TARDIS upgrades:
+   - Engine Booster
+   - Tesseract Drive
+   - Warp Drive
+   - Lightspeed Drive
+   - Atrium
 
+## How To Get The Manual
 
+No normal crafting recipe was found for the manual.
 
-# ASEOHA Overview
+What does exist:
 
-ASEOHA is an addon for The New TARDIS Mod focused on three big areas:
+- a helper function at `data/aseoha/functions/givemanual.mcfunction`
+- a writable-book style give command inside that function
 
-- expanding TARDIS gameplay with custom controls, monitor functions, upgrades, flight events, sound schemes, and attuned utility items
-- adding a large amount of theme content such as consoles, exteriors, decorative blocks, machines, materials, food, tools, armor, music discs, and entities
-- extending world content with custom dimensions, biome definitions, and structure pools
+If you are using commands, the intended path appears to be:
 
-## What This Documentation Covers
-
-This documentation was built from the actual Java registries, behavior classes, manual JSON pages, recipes, worldgen data, and resources in `aseoha/1.16.5/aseoha`.
-
-It does not assume every asset file is active just because it exists. ASEOHA contains a mix of:
-
-- fully registered content
-- data-backed content that depends on the base TARDIS mod
-- legacy or partially wired content that still exists in code or assets
-
-Where that distinction matters, it is called out explicitly.
-
-## Core Feature Areas
-
-| Area | What ASEOHA Adds |
+| Method | How |
 | --- | --- |
-| TARDIS systems | modular console blocks, Coffee Pot and Wibbly Lever controls, monitor protocols, upgrades, flight events, sound schemes |
-| Machinery | Eye of Harmony power setup, harmonic pillars, artron converters, shield extrapolator, Food Machine, custom workbenches |
-| Storage and utility | Hammer Space Pouch, Deadlocker, manual item, sonic variants, attuned item interactions |
-| Entities | K-9, Wall-E, Davros Chair |
-| Building content | large block library for console rooms, corridors, roundels, materials, railings, themed interiors, and decorative sets |
-| Equipment and items | metals, crystals, tools, armor sets, food, discs, spawn eggs, TARDIS parts |
-| World content | dimension definitions, biome JSONs, structure pools, New Earth roads, Gallifrey barn content, Cyber Conversion Ship placement hook |
+| command function | run `/function aseoha:givemanual` |
+| direct give | use creative or admin tools if needed |
 
-## Implemented Vs Legacy
+## Best Pages To Use
 
-This branch has a few places where the codebase is broader than the live registration surface.
+- [Controls And Console Additions](/docs/tardis-systems/controls-and-console-additions/)
+- [Monitor Functions, Upgrades, And Flight Events](/docs/tardis-systems/monitor-functions-upgrades-and-flight-events/)
+- [Machines, Entities, And Storage](/docs/content/machines-entities-and-storage/)
+- [Dimensions, Biomes, Structures, Consoles, And Exteriors](/docs/worlds/dimensions-biomes-structures-consoles-and-exteriors/)
 
-Examples:
+## Important Rule For This Wiki
 
-- `ConsolesRegistry` registers six consoles. Additional console blocks and tiles exist but are commented out or not exposed through the console registry.
-- `RegisterProtocols` registers `eject`, `shrink`, `isomorphic_security`, and `maintenance`. A `HadsProtocol` file exists but is not registered in this branch.
-- `RegisterUpgrades` registers Dynamic Coordinates, Atrium, Hostile Ejection, Engine Booster, Tesseract Drive, Warp Drive, and Lightspeed Drive. `HADS`, `AutoStabilizer`, and `StandardSpeedUpgrade` exist in code but are not registered here.
-- `RegisterFlightEvent` registers Power Fault and TARDIS Taking Over. `DimensionalBreach` exists in code but is not registered.
-- worldgen data references some structures, such as `aseoha:citadel`, that are not currently registered in `STStructures`.
-
-Use the system pages below for the exact current state.
-
-## Navigation
-
-- [TARDIS Systems](tardis-systems/)
-- [Content Catalog](content/)
-- [Worlds And Structures](worlds/)
+If something has no normal recipe or unlock path, it is labeled that way instead of being presented like a standard survival feature.

@@ -1,183 +1,199 @@
 ---
 title: Machines, Entities, And Storage
 date: 2026-04-07
-description: Functional blocks, custom mobs, and inventory features
+description: How to craft and use ASEOHA's important utility blocks, machines, and companions
 draft: false
 weight: 1
 ---
 
-# Machines
-
-## Eye Of Harmony
-
-ASEOHA's Eye of Harmony setup is built around three linked blocks:
-
-- `eye_of_harmony`
-- `harmonic_pillar`
-- `zero_point_dwarf_star_alloy`
-
-The manual describes the intended loop:
-
-- place the Eye of Harmony inside the TARDIS
-- insert a Nether Star
-- activate it
-- surround it with at least three Harmonic Pillars
-
-The `EOHLink` block supports that workflow directly:
-
-- right-clicking with a Nether Star stores the star state
-- it consumes the star
-- it marks the tile active
-- a later interaction triggers tile activation
-
-The branch intent is clear: this is a high-end TARDIS power source with custom activation rather than a passive decorative block.
-
-## Tribophysical Waveform Macro Kinetic Extrapolator
-
-This is ASEOHA's force-field block.
-
-Behavior in code:
-
-- it is redstone-powered
-- when lit, it runs an area shield check
-- if inside a TARDIS with a Shield Generator subsystem force field active, it protects the exterior bubble
-- outside a TARDIS, it still acts as a local defensive field around the placed block
-
-What it repels:
-
-- monsters
-- arrows not fired from inside the protected area
-- laser projectiles not fired from inside the protected area
-
-This makes it a real physical defense system, not just a visual shield effect.
-
-## Food Machine
-
-The Food Machine is a TARDIS-interior utility block.
-
-Actual branch behavior:
-
-- it only works where the TARDIS console can be resolved
-- it spends 16 artron per use
-- normal right-click gives a potato
-- crouch-right-click gives bonemeal
-- Alt-right-click gives a carrot
-
-The in-game manual says 5 AU and mentions carrot and bonemeal variants. The code currently uses 16 artron per activation.
-
-## Artron Conversion Blocks
-
-Two converter machines exist:
-
-- `artron_converter_fe_au`
-- `artron_converter_au_fe`
-
-Config-backed tuning exists for all three energy-side machines:
-
-- FE-to-AU generator
-- AU-to-FE converter
-- charger
-
-Server config exposes capacity, throughput, and conversion-rate values for each.
-
-## Workbench And Molecular Assembler
-
-`workbench` and `molecular_assembler` both use the same custom workbench block implementation.
-
-That system:
-
-- stores up to four inserted items in a tile buffer
-- accepts one item per click
-- resolves recipes through `WorkBenchRecipeHandler`
-- drops the crafted result above the table when crouch-clicked
-- spills stored ingredients if the recipe is invalid or the block is broken
+# Core Utility Blocks
 
 ## Sonic Workbench
 
-`sonic_workbench` opens a `QuantiscopeTile` container from the base TARDIS ecosystem.
+This is the gateway block for TARDIS-style machine crafting.
 
-ASEOHA supplies recipe content for several stations:
+### Crafting Recipe
 
-| Recipe family | Count |
+| Output | Recipe |
 | --- | --- |
-| crafting_table | 71 |
-| quantiscope | 23 |
-| spectrometer | 53 |
-| blast_furnace | 6 |
-| smithing_table | 9 |
+| `Sonic Workbench` | `Any Planks x2`, `TARDIS Sonic Emitter x2` |
 
-This means ASEOHA adds a substantial crafted-progression layer, not just standalone item drops.
+### What It Is For
 
-# Storage Features
+The Sonic Workbench opens the `Quantiscope` style machine inventory. That is where many ASEOHA items are made:
 
-## Hammer Space Buffer Access
+- modular controls
+- Hammer Space Pouch
+- Deadlocker
+- Engine Booster
+- Dynamic Coordinates
+- Hostile Ejection
+- Sonic Laser
+- Warp Core
 
-The Hammer Space Pouch is documented in the TARDIS systems section, but it also matters here as a storage feature:
+## Eye Of Harmony
 
-- it exposes remote access to the TARDIS hammer-space buffer
-- it supports single-item and full-stack workflows
-- it depends on item attunement rather than local inventory persistence
+### Crafting Recipe
 
-## K-9 Storage
+| Output | Recipe |
+| --- | --- |
+| `Eye Of Harmony` | `Glass Pane x4`, `Blue Crystal`, `Redstone`, `Redstone Lamp x2`, `TARDIS Circuits x2` |
 
-K-9 carries a 36-slot internal inventory.
+### Support Recipe: Harmonic Pillar
 
-Player access:
+| Output | Recipe |
+| --- | --- |
+| `Harmonic Pillar` | `Glass`, `Gold Block`, `Gold Ingot` |
 
-- K-9 must be tamed
-- K-9 must have power
-- crouch interaction opens the inventory container
+### How To Use It
 
-The built-in manual calls out this storage role explicitly.
+1. place it inside the TARDIS
+2. right-click it with a `Nether Star`
+3. right-click it again with an empty hand
+4. place Harmonic Pillars nearby
 
-# Entities
+Practical rule:
+
+- the Eye is meant to be activated manually
+- the manual warns that too few Harmonic Pillars causes overheating problems
+
+## Food Machine
+
+### Crafting Recipe
+
+| Output | Recipe |
+| --- | --- |
+| `Food Machine` | `Iron Ingot x6`, `Dispenser`, `Stonecutter`, `Beef` |
+
+### How To Use It
+
+| Input style | Result |
+| --- | --- |
+| normal right-click | `Potato` |
+| hold `Alt` and right-click | `Carrot` |
+| crouch-right-click | `Bonemeal` |
+
+Cost:
+
+- `16` artron per use
+
+## Tribophysical Waveform Macro Kinetic Extrapolator
+
+### Crafting Recipe
+
+| Output | Quantiscope ingredients |
+| --- | --- |
+| `Tribophysical Waveform Macro Kinetic Extrapolator` | `Iron Block x2`, `Redstone Torch`, `TARDIS Circuits`, `Shield Generator Subsystem` |
+
+### How To Use It
+
+1. place the block
+2. power it with redstone
+3. if you are using it with a TARDIS, make sure the shield system is active
+
+What it does:
+
+- pushes hostile mobs away
+- blocks or deflects arrows
+- interferes with laser shots
+
+Outside a TARDIS, it still works as a local defensive field.
+
+# Storage And Remote Utility
+
+## Hammer Space Pouch
+
+### Crafting Recipe
+
+| Output | Quantiscope ingredients |
+| --- | --- |
+| `Hammer Space Pouch` | `Redstone Block x2`, `Interstitial Antenna`, `Diamond Block`, `TARDIS Circuits` |
+
+### How To Use It
+
+1. attune it to your TARDIS
+2. hold it in the off-hand
+3. use your main hand to decide what is stored or retrieved
+
+| Player state | Result |
+| --- | --- |
+| main hand empty, normal use | pull 1 item |
+| main hand empty, crouching | pull 1 full stack |
+| main hand holding item, normal use | store 1 item |
+| main hand holding item, crouching | store the full stack |
+
+## Deadlocker
+
+### Crafting Recipe
+
+| Output | Quantiscope ingredients |
+| --- | --- |
+| `Deadlocker` | `Netherite Scrap`, `TARDIS Key` |
+
+### How To Use It
+
+1. attune it to your TARDIS
+2. stand close to the exterior
+3. use it to toggle deadlock
+
+What it does:
+
+- locks or unlocks the exterior
+- forces the door shut when locking
+
+# Companion Entities
 
 ## K-9
 
-K-9 is one of ASEOHA's largest custom gameplay systems.
+### Crafting Recipe
 
-Core behavior:
+| Output | Recipe |
+| --- | --- |
+| `K-9 Spawn Egg` | `Daylight Detector`, `Gold Ingot`, `Artron Battery Medium`, `Iron Ingot`, `Netherite Scrap`, `Redstone Block` |
 
-- tamed with a Sonic Screwdriver
-- powered by artron-bearing items such as sonics and batteries
-- loses power over time
-- powers down when charge is depleted
-- uses ranged laser attacks
-- targets creepers and other threats
-- has its own inventory
-- reports power state to its owner on interaction
+### How To Use K-9
 
-Additional implementation details:
+1. spawn K-9
+2. tame K-9 with a Sonic Screwdriver
+3. recharge K-9 with an artron-holding item
+4. use normal right-click for the GUI
+5. crouch-right-click for inventory access
 
-- K-9 is space-immune
-- damage reduces its stored power
-- projectile attacks are converted into owner-aware retaliation logic
-- tail angle is used as a visual state indicator
+Practical notes:
 
-The config option `K9PowerDrainRate` controls how fast its battery drains.
+- K-9 fights threats with ranged laser attacks
+- K-9 loses power over time
+- power drain defaults to 1 AU every 25 seconds
 
 ## Wall-E
 
-Wall-E extends the K-9 foundation but changes the interaction and AI profile.
+### Crafting Recipe
 
-Notable traits:
+| Output | Recipe |
+| --- | --- |
+| `Wall-E Spawn Egg` | `Iron Block`, `Gold Ingot x3`, `Artron Battery Medium`, `Chest` |
 
-- taming item is a composter, not a sonic
-- can carry and place blocks like an Enderman-style utility mob
-- retains robot-style movement and survival traits
-- is also space-immune
+### How To Use Wall-E
 
-Wall-E is less of a combat helper than K-9 and more of a novelty utility companion.
+1. spawn Wall-E
+2. tame it with a `Composter`
+3. use it like a utility companion
 
-## Davros Chair
+Practical behavior:
 
-The Davros Chair is a ridable custom entity.
+- can pick up and place blocks
+- is less of a combat helper than K-9
 
-Behavior:
+# Sonic Utility Items
 
-- players can mount it directly with an empty hand
-- it uses rider movement input for steering
-- it is underwater-safe and fire-immune
-- crouching with a TARDIS sonic heals it
+## Sonic Laser
 
-This is closer to a custom vehicle than a normal passive mob.
+### Crafting Recipe
+
+| Output | Quantiscope ingredients |
+| --- | --- |
+| `Sonic Laser` | `TARDIS Sonic`, `High Artron Battery`, `Earthshock Gun`, `Steel Ingot`, `TARDIS Circuits` |
+
+### What It Does
+
+Use it like a sonic that also fires a damaging laser shot.

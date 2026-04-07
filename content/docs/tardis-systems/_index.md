@@ -8,6 +8,6 @@ weight: 2
 
 This section covers the gameplay systems ASEOHA layers onto the base TARDIS mod.
 
-- [Controls And Console Additions](controls-and-console-additions.md)
-- [Monitor Functions, Upgrades, And Flight Events](monitor-functions-upgrades-and-flight-events.md)
-- [Attuned Items, Sonics, And Utilities](attuned-items-sonics-and-utilities.md)
+- [Controls And Console Additions](/docs/tardis-systems/controls-and-console-additions/)
+- [Monitor Functions, Upgrades, And Flight Events](/docs/tardis-systems/monitor-functions-upgrades-and-flight-events/)
+- [Attuned Items, Sonics, And Utilities](/docs/tardis-systems/attuned-items-sonics-and-utilities/)

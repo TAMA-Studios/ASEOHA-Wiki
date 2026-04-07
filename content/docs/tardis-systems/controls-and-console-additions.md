@@ -1,115 +1,133 @@
 ---
 title: Controls And Console Additions
 date: 2026-04-07
-description: Modular console blocks, custom controls, and registered consoles
+description: How to build modular controls, unlock consoles, and use ASEOHA-only controls
 draft: false
 weight: 1
 ---
 
-# Controls And Console Additions
+# Modular Controls
 
-ASEOHA extends TARDIS piloting in two different ways:
+ASEOHA adds a modular-console building path. Instead of relying only on built-in control layouts, you can craft control blocks and assemble your own console room setup.
 
-- it adds modular console block controls that can be crafted and placed as physical console components
-- it registers custom control entities that appear on supported console designs
+## Step 1: Craft A Control Mold
 
-## Modular Console Blocks
-
-The `AseohaBlocks` registry adds a modular-control subset for custom console construction:
-
-- `flight_button`
-- `facing_control`
-- `handbreak_control`
-- `inc_control`
-- `randomizer_control`
-- `refueler_control`
-- `x_control`
-- `y_control`
-- `z_control`
-- `dimensional_button`
-
-There is also a second visual set for the coordinate controls:
-
-- `cool_x_control`
-- `cool_y_control`
-- `cool_z_control`
-
-These blocks are assigned to a separate creative tab from the main ASEOHA block catalog, which makes them function as a dedicated modular-console kit rather than generic decoration.
-
-## What The Manual Says About Modified Control Behavior
-
-ASEOHA's built-in manual documents several behavior changes or additions:
-
-| Control | Documented behavior |
+| Output | Recipe |
 | --- | --- |
-| Handbrake | safe while landing, still dangerous if used during active flight |
-| Sonic Port | charges an inserted Sonic Screwdriver |
-| Coffee Pot | consumes artron and produces coffee |
-| Wibbly Lever | sends the TARDIS into itself, then expects the player to fly back out by setting a new destination |
+| `Control Mold` | `Quartz x4`, `Clay Ball x4`, `TARDIS Circuit Paste x1` |
 
-## Coffee Pot
+This is the common part used in most ASEOHA modular control recipes.
 
-`ControlsRegistry` registers `coffeepot` as a real control entry.
+## Step 2: Build Controls In The Quantiscope
 
-Behavior in code:
+Every modular control recipe found here uses the Quantiscope.
 
-- clicking it checks whether the console has enough artron
-- on success it gives the player one `coffee` item
-- it subtracts artron directly from the console
-- it uses TARDIS success and fail sounds to provide feedback
+| Control | Ingredients |
+| --- | --- |
+| `Flight Button` | `Redstone`, `Control Mold`, `Birch Button` |
+| `Facing Control` | `Redstone`, `Control Mold`, `Lantern` |
+| `Handbreak Control` | `Redstone`, `Control Mold`, `Lever` |
+| `Inc Control` | `Redstone`, `Control Mold`, `Redstone Torch` |
+| `Randomizer Control` | `Redstone`, `Control Mold`, `Comparator` |
+| `Refueler Control` | `Redstone`, `Control Mold`, `Oak Button` |
+| `Dimensional Button` | `Redstone`, `Control Mold`, `Chorus Fruit` |
+| `X Control` | `Redstone`, `Control Mold`, `Stone Button` |
 
-Important detail:
+No Quantiscope recipe file was found for `Y Control` or `Z Control`, even though the blocks exist in ASEOHA.
 
-- the manual says the Coffee Pot costs 10 AU
-- the current `CoffeePot` class actually checks for 25 artron and removes 25
+## What The Important ASEOHA Controls Do
 
-For this branch, the code is the more reliable source.
+### Coffee Pot
 
-## Wibbly Lever
+How to use it:
 
-`ControlsRegistry` also registers `wibbly_lever`.
+1. Walk up to the Coffee Pot control on a supported console.
+2. Right-click it.
+3. If the console has enough artron, you get one coffee item.
 
-Behavior in code:
+Current behavior:
 
-- it requires the console to be able to fly and to have at least 64 artron
-- it force-loads the interior chunk
-- it removes the current exterior
-- it places the exterior at `0, 128, 5` in the current dimension
+| Action | Result |
+| --- | --- |
+| Right-click with enough artron | get `Coffee` |
+| Right-click without enough artron | fail sound, no coffee |
 
-Practical result:
+Important note:
 
-- this is not a flavor toggle
-- it is a relocation mechanic that deliberately forces the TARDIS into its own space until the player flies back out
+- the built-in manual says 10 AU
+- the current build removes 25 artron
 
-The manual description matches that intent.
+### Wibbly Lever
 
-## Registered Consoles
+How to use it:
 
-`ConsolesRegistry` currently exposes six consoles:
+1. Make sure the TARDIS can fly and has enough artron.
+2. Right-click the Wibbly Lever.
+3. The TARDIS exterior gets moved into its own space.
+4. Set a destination and take off again to get back out.
 
-- Copper
-- Custard
+Current behavior:
+
+| Requirement | Value |
+| --- | --- |
+| artron needed | at least `64` |
+| effect | removes current exterior and places it at `0, 128, 5` in the current dimension |
+
+This is a gimmick-travel control, not a normal flight button replacement.
+
+### Handbrake
+
+Practical rule:
+
+| Situation | Effect |
+| --- | --- |
+| while landing | safe |
+| during active flight | still dangerous |
+
+### Sonic Port
+
+Practical rule:
+
+| Use | Effect |
+| --- | --- |
+| insert Sonic Screwdriver | charges the sonic |
+
+# Unlocking Console Designs
+
+Consoles are unlocked through Spectrometer recipes when a recipe exists.
+
+How Spectrometer unlocks work:
+
+1. put the listed ingredient into the Spectrometer
+2. let it process and download
+3. claim the matching console unlock
+
+## Spectrometer Console Recipes Found
+
+| Console Unlock | Ingredient |
+| --- | --- |
+| `Copper Console` | `Golden Potato` |
+| `Brackolin Console` | `Red Nether Bricks` |
+| `Custard Console` | `Cut Sandstone` |
+| `Blue Marble Console` | `Smooth Quartz` |
+
+### Support Recipe: Golden Potato
+
+You need this for the Copper Console unlock.
+
+| Output | Recipe |
+| --- | --- |
+| `Golden Potato` | `Potato` surrounded by `Gold Nuggets x8` |
+
+## Registered Consoles With No Recipe Found Here
+
+These consoles exist in ASEOHA, but no Spectrometer recipe was found for them:
+
 - Battle
-- Brackolin
-- Blue Marble
 - Hartnell
 
-The block and tile layer contains additional console content, including Takomak and some other legacy references, but those are not all registered as selectable consoles in this branch.
+That usually means one of three things:
 
-## Console Texture Variants
-
-ASEOHA uses `TextureVariants` to add alternate looks to some consoles:
-
-- Copper has multiple metal and color variants including normal, steel, rose gold, blue, turquoise, and crystal
-- Custard has default, blue, and off variants
-
-This means ASEOHA is not just adding console blocks, it is also extending the visual customization layer around them.
-
-## Sound Schemes
-
-ASEOHA registers two sound schemes:
-
-- `stealth`
-- `smith`
-
-The Smith scheme is backed by custom takeoff, loop, and landing sounds. The Stealth scheme uses a silent scheme implementation.
+- they are intended to be admin-given
+- they are unlocked some other way outside the recipe data
+- they are unfinished for normal survival progression

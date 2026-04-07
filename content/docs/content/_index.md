@@ -8,5 +8,5 @@ weight: 3
 
 This section covers ASEOHA's content library outside the pure TARDIS-system layer.
 
-- [Machines, Entities, And Storage](machines-entities-and-storage.md)
-- [Blocks, Materials, Equipment, And Media](blocks-materials-equipment-and-media.md)
+- [Machines, Entities, And Storage](/docs/content/machines-entities-and-storage/)
+- [Blocks, Materials, Equipment, And Media](/docs/content/blocks-materials-equipment-and-media/)

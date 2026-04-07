@@ -4,9 +4,9 @@ sidebar:
   open: true
 ---
 
-This wiki documents the `aseoha/1.16.5/aseoha` branch as it exists in this workspace.
+This wiki is written as a player guide for ASEOHA.
 
-- [Overview](overview)
-- [TARDIS Systems](tardis-systems/)
-- [Content Catalog](content/)
-- [Worlds And Structures](worlds/)
+- [Overview](/docs/overview/)
+- [TARDIS Systems](/docs/tardis-systems/)
+- [Content Catalog](/docs/content/)
+- [Worlds And Structures](/docs/worlds/)

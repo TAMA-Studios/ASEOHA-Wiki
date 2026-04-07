@@ -1,102 +1,126 @@
 ---
 title: Blocks, Materials, Equipment, And Media
 date: 2026-04-07
-description: Decorative sets, materials, armor, tools, foods, and audio content
+description: Builder guide, material progression, armor, tools, and collectible media
 draft: false
 weight: 2
 ---
 
-# Block Families
+# Builder Guide
 
-ASEOHA's block library is broad. The codebase mixes active registrations with some legacy/commented content, but the active sets clearly group into several themes.
+This page is for the part of ASEOHA most players actually end up using long-term:
 
-## Interior And Corridor Themes
+- building console rooms and corridors
+- turning raw materials into blocks
+- crafting armor and tools
+- chasing the late-game parts used by advanced upgrades
 
-Major decorative families include:
+## Best Decorative Families To Build With
 
-- Alabaster
-- Hell Bent
-- Megalos
-- Toyota
-- Copper
-- roundel variants
-- railings and stair-rail style decoration
+If you just want to know what sets are meant to go together, start here:
 
-These sets provide:
+| Theme | Good for |
+| --- | --- |
+| `Alabaster` | bright clean futuristic rooms |
+| `Hell Bent` | white-and-silver Time Lord interiors |
+| `Megalos` | retro paneling and roundel-heavy builds |
+| `Toyota` | modern geometric console rooms |
+| `Copper` | warm metallic rooms and columns |
+| `Railings` | catwalks, balcony edges, stairs, galleries |
 
-- walls
-- floors
-- pattern blocks
-- glass variants
-- roundels
-- lit panels
-- pillars
-- dividers
-- slabs and themed trim
+## Easy Terrain And Accent Blocks
 
-This is the main reason ASEOHA is valuable as a building addon. It does not just add isolated props. It adds matching interior palettes.
+These are the easiest ASEOHA-style world accents to drop into a build:
 
-## Terrain And Dimension Materials
+| Block family | Use |
+| --- | --- |
+| `Gallifrey Sand` | alien warm-color terrain |
+| `Skaro Sand` | harsh dead-world terrain |
+| `Trenzalore Sand` | custom planet detailing |
+| `Azalea` and `Flowering Azalea` | backported foliage for modern-style builds |
+| `Ochre`, `Pearlescent`, `Verdant Froglights` | lighting and trim |
 
-Custom terrain-facing blocks include:
+# Material Progression
 
-- Gallifrey Sand
-- Skaro Sand
-- Trenzalore Sand
-- azalea and flowering azalea backports
-- custom froglights
+ASEOHA has several material families, but the most practical way to think about them is by use.
 
-The dimension system also relies on custom surface builders and biome colors to push each world toward a distinct visual identity.
+## Basic Building Metals
 
-## Industrial And Resource Blocks
+| Material | Main use |
+| --- | --- |
+| `Steel` | early armor, tools, machine parts, storage block |
+| `Dalekanium` | stronger armor line and decorative metal block |
+| `Carbon Steel` | armor line |
+| `Metalert` | armor line and tech crafting |
+| `Latinum` | advanced material chain |
 
-Registered resource families include:
+## Crystal And Rare Materials
 
-- steel
-- dalekanium
-- pure dalekanium
-- carbon steel
-- metalert
-- latinum
-- crystaline
-- pure crystaline
-- blue crystal
-- huon crystal
+| Material | Main use |
+| --- | --- |
+| `Blue Crystal` | Eye of Harmony recipe and high-end parts |
+| `Crystaline` | advanced item family and decoration |
+| `Pure Crystaline` | higher-tier crystal family |
+| `Pure Dalekanium` | improved dalekanium armor block family |
+| `Huon Crystal` | exotic resource block |
 
-These families are used across:
+## Simple Compression Recipes
 
-- ore blocks
-- storage blocks
-- ingots and nuggets
-- tool tiers
-- armor sets
-- machine recipes
+Several storage blocks use the standard 3x3 compression pattern.
 
-# Equipment
+| Output | Input |
+| --- | --- |
+| `Steel Block` | `Steel Ingot x9` |
+| `Dalekanium Block` | `Dalekanium Ingot x9` |
+| `Latinum Block` | `Latinum Brick x9` |
 
-## Tool And Armor Lines
+## Latinum Conversion Chain
 
-ASEOHA defines full or partial equipment lines for:
+Latinum uses a multi-step conversion ladder.
 
-- Steel
+| Step | Recipe |
+| --- | --- |
+| `Latinum Strip` | `Latinum Slip x9` |
+| `Latinum Bar` | `Latinum Strip x9` |
+| `Latinum Brick` | `Latinum Bar x9` |
+| `Latinum Block` | `Latinum Brick x9` |
+
+If you are building with Latinum blocks, expect a long material climb.
+
+# Gear And Equipment
+
+## Steel Gear
+
+Steel is the clearest full survival gear line with visible crafting support.
+
+| Item | Pattern |
+| --- | --- |
+| `Steel Sword` | normal sword pattern using `Steel Ingots` |
+| `Steel Pickaxe` | normal pickaxe pattern using `Steel Ingots` |
+| `Steel Shovel` | normal shovel pattern using `Steel Ingots` |
+| `Steel Axe` | normal axe pattern using `Steel Ingots` |
+| `Steel Hoe` | normal hoe pattern using `Steel Ingots` |
+| `Steel Helmet` | normal helmet pattern using `Steel Ingots` |
+| `Steel Chestplate` | normal chestplate pattern using `Steel Ingots` |
+| `Steel Leggings` | normal leggings pattern using `Steel Ingots` |
+| `Steel Boots` | normal boots pattern using `Steel Ingots` |
+
+If you want an ASEOHA gear set early, Steel is the most straightforward place to start.
+
+## Other Armor Families
+
+Crafting-table armor recipes were also found for:
+
 - Dalekanium
+- Pure Dalekanium
 - Carbon Steel
 - Metalert
-- Pure Dalekanium
-- Latinum
 
-Most of these have:
+These are best treated as straight material upgrades or alternate theme sets.
 
-- sword
-- pickaxe
-- shovel
-- axe
-- hoe
-- full armor set
+## Costume Items
 
-## Costume And Vanity Items
-
-The mod also adds themed wearable items:
+ASEOHA also includes wearable flavor items:
 
 - Prydonian helm
 - scarf
@@ -106,48 +130,55 @@ The mod also adds themed wearable items:
 - blue bowtie
 - Starfleet tunics and leggings/boots
 
-These reinforce the Doctor Who and sci-fi crossover identity of the mod beyond pure progression gear.
+No standard crafting recipes were found for all of these in the recipe folders, so some may be creative, loot, or alternate-source content depending on pack setup.
 
-# Consumables And Miscellaneous Items
+# Important Utility Crafting Parts
 
-Food and novelty items include:
+These are the parts that matter for late-game upgrade progression.
 
-- coffee
-- jelly babies
-- gingerbread variants
-- twinkie
-- golden potato
-- candy cane
-- candy cane sonic
+## Hammer
 
-Functional utility items include:
+| Output | Recipe |
+| --- | --- |
+| `Hammer` | `Steel Ingot x4`, `Stick x2` |
 
-- harmonic capacitor
-- apollyon capacitor
-- control mold
-- engine
-- hammer
-- warp core
-- phaser power cell
-- nemesis type 2 phaser
+## Netherite Reinforced Circuits
 
-# Music And Audio Content
+| Output | Recipe |
+| --- | --- |
+| `Netherite Reinforced Circuits` | `Circuit Paste x5`, `Netherite Scrap x3`, `Xion Crystal` |
 
-ASEOHA registers a large custom sound set.
+## Star Infused Netherite Ingot
 
-## Functional Sounds
+| Output | Recipe |
+| --- | --- |
+| `Star Infused Netherite Ingot` | `Nether Star x4`, `Netherite Ingot`, `Phaser Power Cell x4` |
 
-Gameplay-focused sound additions include:
+These are not filler items. They feed directly into the Warp Core and Warp Drive line.
 
-- Smith takeoff, loop, and landing
-- distorted low-power takeoff and landing
-- throttle blast
-- custom azalea and azalea-leaf sound sets
-- affirmative K-9 voice line
+# Food And Small Items
 
-## Music Discs
+## Useful Consumables
 
-Music-disc items include:
+| Item | How to get it |
+| --- | --- |
+| `Coffee` | from the Coffee Pot control |
+| `Golden Potato` | craft with `Gold Nuggets x8` around a `Potato` |
+| `Red Jelly Baby` | recipe exists in the crafting folder |
+| `Twinkie` | item exists, no normal recipe confirmed here |
+| `Candy Cane` | item exists, no normal recipe confirmed here |
+
+## Why Golden Potato Matters
+
+The Golden Potato is not just food.
+
+It is also the unlock item for the Copper Console in the Spectrometer, so it is worth making even if you do not care about the food itself.
+
+# Music And Media
+
+ASEOHA includes a large set of custom music discs.
+
+## Disc Items Present
 
 - Majestic Tale
 - Cyber Army
@@ -163,4 +194,22 @@ Music-disc items include:
 - I Am The Doctor
 - Lava Chicken
 
-This is a meaningful media layer, not a token addition. ASEOHA ships a real soundtrack selection.
+## Getting The Discs
+
+Only a normal recipe for `Lava Chicken Disc` was clearly present in the recipe data.
+
+For the rest, assume one of these:
+
+- creative/admin access
+- loot or custom pack distribution
+- another mod or datapack path outside the recipe folder
+
+# Practical Build Advice
+
+If you want a solid survival-friendly ASEOHA build path:
+
+1. start with `Steel` for tools and basic utility crafting
+2. unlock `Coral` exterior, `Copper Console`, and `Basic Interior`
+3. decorate with `Alabaster`, `Copper`, or `Hell Bent` blocks depending on style
+4. add `Food Machine`, `Eye Of Harmony`, and modular controls
+5. move into `Latinum`, `Metalert`, and Warp-line parts only after the core TARDIS setup is already working
