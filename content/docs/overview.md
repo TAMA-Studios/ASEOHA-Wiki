@@ -6,6 +6,13 @@ draft: false
 weight: 1
 ---
 
+
+# The current documentation (for lack of a better option) has been made with ai. so it will have things that arent exactly needed right now. im sure codiak is conna have my ass for this but oh well. he can document this shit himself
+
+
+
+
+
 # ASEOHA Overview
 
 ASEOHA is an addon for The New TARDIS Mod focused on three big areas:
