@@ -1,12 +1,12 @@
 ---
 title: Unlocking Exteriors
 date: 2026-04-07
-description: Documents how you unlock exteriors added by ASEOHA
+description: This page documents the Exteriors added by ASEOHA!
 draft: false
 ---
 # How To Unlock Exteriors
 
-The exteriors below are unlocked through the Spectrometer.
+Use the spectrometer
 
 ## Spectrometer Exterior Recipes
 
@@ -24,19 +24,9 @@ The exteriors below are unlocked through the Spectrometer.
 | `Bluedoctor` | `Lapis Block` |
 
 
-## Support Recipe: Artron Bank
+## Exteriors With No Recipe
 
-You need this for the `Classic Hartnell` exterior unlock.
-
-
-| Output | Recipe |
-| ------------- | --------------------------------------------- |
-| `Artron Bank` | `Xion Crystal x4`, `Gold Ingot x4`, `Diamond` |
-
-
-## Registered Exteriors With No Recipe Found Here
-
-These exteriors exist in ASEOHA, but lack a recipe
+These exteriors exist in ASEOHA, but lack a recipe, as they are unfinished.
 
 - Sutekh
 - Mk2 Capaldi
@@ -50,4 +40,3 @@ These exteriors exist in ASEOHA, but lack a recipe
 - Whittaker
 - Colin Richmond
 
-These are unfinished, but obtainable via commands
