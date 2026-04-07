@@ -10,8 +10,9 @@ Use the spectrometor
 
 ## Spectrometer Interior Recipes
 
+
 | Interior Unlock | Put This In The Spectrometer |
-| --- | --- |
+| ------------------------ | ---------------------------- |
 | `13th Crystal Interior` | `Yellow Crystal` |
 | `4th Secondary Interior` | `Cookie` |
 | `8th Edwardian Interior` | `Alembic` |
@@ -52,3 +53,5 @@ Use the spectrometor
 | `Two` | `White Wool` |
 | `Valeyard Interior` | `Spruce Planks` |
 | `Wizard Tower` | `Purple Carpet` |
+
+
