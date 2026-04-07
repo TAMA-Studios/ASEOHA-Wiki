@@ -1,5 +1,5 @@
 title: My Wiki
-baseURL: https://YOUR-USERNAME.github.io/YOUR-REPO/
+baseURL: https://tama-studios.github.io/ASEOHA-Wiki/
 enableRobotsTXT: true
 enableGitInfo: true
 defaultContentLanguage: en
@@ -18,8 +18,13 @@ markup:
   highlight:
     noClasses: false
 
+params:
+  author:
+    name: TAMA Studio
+    email: null@tamastudios.us
+
 menu:
   main:
     - name: GitHub
-      url: "https://github.com/YOUR-USERNAME/YOUR-REPO"
+      url: "https://github.com/TAMA-Studios/ASEOHA"
       weight: 1
