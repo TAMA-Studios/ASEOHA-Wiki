@@ -167,10 +167,3 @@ What happens:
 
 - safe blocks in the framed area are stored and moved with the TARDIS
 - if the landing spot is unsafe, the Atrium is buffered and restored later when a safe spot is found
-
-
-
-### HADS
-
-HADS will detect nearby hostile mobs within a 10 block radius of the TARDIS, force an emergency takeoff (Flight Events WILL NOT OCCUR unless there is another player inside the TARDIS, so stabilizers are unnesecary)
-The TARDIS will stay in flight for 10 minutes (You can change this in the server config!) before landing
