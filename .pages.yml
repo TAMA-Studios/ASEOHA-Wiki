@@ -1,12 +1,19 @@
-media: media
+media:
+  input: static/images
+  output: /images
 
 content:
-  - name: pages
-    label: Pages
+  - name: wiki
+    label: Wiki Pages
     type: collection
-    path: docs
+    path: content
+    filename: '{fields.title}.md'
     view:
-      fields: [title, date]
+      fields: [title, date, draft]
+      sort: [title, date]
+      default:
+        sort: title
+        order: asc
     fields:
       - name: title
         label: Title
@@ -14,9 +21,19 @@ content:
       - name: date
         label: Date
         type: date
+        options:
+          format: yyyy-MM-dd
       - name: description
         label: Description
         type: text
+      - name: draft
+        label: Draft
+        type: boolean
+        default: false
+      - name: weight
+        label: Sidebar Order (Weight)
+        type: number
+        description: Lower numbers appear higher in the sidebar. Leave blank for automatic.
       - name: body
         label: Body
         type: rich-text
