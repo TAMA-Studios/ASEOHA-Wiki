@@ -15,6 +15,7 @@ These are the ASEOHA monitor buttons and what they are for in normal play.
 | `Shrink` | makes the exterior tiny |
 | `Isomorphic Security` | limits console and monitor use to keyed players |
 | `Maintenance` | toggles maintenance mode |
+| `HADS` | Toggles the "Hostile Action Displacement System" |
 
 
 ## Eject
@@ -56,3 +57,8 @@ Use this when:
 - you want to force the TARDIS into its maintenance state
 - you are doing testing or controlled setup
 
+
+### HADS
+
+HADS will detect nearby hostile mobs within a 10 block radius of the TARDIS, force an emergency takeoff (Flight Events WILL NOT OCCUR unless there is another player inside the TARDIS, so stabilizers are unnesecary)
+The TARDIS will stay in flight for 10 minutes (You can change this in the server config!) before landing
