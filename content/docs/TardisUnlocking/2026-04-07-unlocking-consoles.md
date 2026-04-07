@@ -6,6 +6,8 @@ draft: false
 ---
 # How To Unlock Consoles
 
+Use the spectrometer
+
 ## Spectrometer Console Recipes
 
 
