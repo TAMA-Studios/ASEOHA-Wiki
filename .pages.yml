@@ -6,7 +6,7 @@ content:
   - name: wiki
     label: Wiki Pages
     type: collection
-    path: docs
+    path: content/docs
     view:
       fields: [title, date, draft]
       sort: [weight, title]
